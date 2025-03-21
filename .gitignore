@@ -4,3 +4,4 @@ data/*
 logs/*
 metrics/*
 models/*
+cifar10_partitioning

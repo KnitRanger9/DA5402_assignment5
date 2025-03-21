@@ -1,0 +1,34 @@
+2025-03-20 19:45:30,465 - __main__ - INFO - Created directory: data/cifar10_images
+2025-03-20 19:45:30,466 - __main__ - INFO - Downloading CIFAR-10 dataset...
+2025-03-20 19:48:40,946 - __main__ - INFO - Total images: 60000
+2025-03-20 19:48:40,946 - __main__ - INFO - Created directory: data/cifar10_images\airplane
+2025-03-20 19:48:40,946 - __main__ - INFO - Class airplane: 6000 images
+2025-03-20 19:48:53,321 - __main__ - INFO - Saved 6000 images for class airplane
+2025-03-20 19:48:53,322 - __main__ - INFO - Created directory: data/cifar10_images\automobile
+2025-03-20 19:48:53,322 - __main__ - INFO - Class automobile: 6000 images
+2025-03-20 19:49:06,096 - __main__ - INFO - Saved 6000 images for class automobile
+2025-03-20 19:49:06,101 - __main__ - INFO - Created directory: data/cifar10_images\bird
+2025-03-20 19:49:06,101 - __main__ - INFO - Class bird: 6000 images
+2025-03-20 19:49:17,167 - __main__ - INFO - Saved 6000 images for class bird
+2025-03-20 19:49:17,168 - __main__ - INFO - Created directory: data/cifar10_images\cat
+2025-03-20 19:49:17,168 - __main__ - INFO - Class cat: 6000 images
+2025-03-20 19:49:27,469 - __main__ - INFO - Saved 6000 images for class cat
+2025-03-20 19:49:27,478 - __main__ - INFO - Created directory: data/cifar10_images\deer
+2025-03-20 19:49:27,479 - __main__ - INFO - Class deer: 6000 images
+2025-03-20 19:49:37,983 - __main__ - INFO - Saved 6000 images for class deer
+2025-03-20 19:49:37,984 - __main__ - INFO - Created directory: data/cifar10_images\dog
+2025-03-20 19:49:37,984 - __main__ - INFO - Class dog: 6000 images
+2025-03-20 19:49:48,367 - __main__ - INFO - Saved 6000 images for class dog
+2025-03-20 19:49:48,368 - __main__ - INFO - Created directory: data/cifar10_images\frog
+2025-03-20 19:49:48,368 - __main__ - INFO - Class frog: 6000 images
+2025-03-20 19:49:58,636 - __main__ - INFO - Saved 6000 images for class frog
+2025-03-20 19:49:58,637 - __main__ - INFO - Created directory: data/cifar10_images\horse
+2025-03-20 19:49:58,638 - __main__ - INFO - Class horse: 6000 images
+2025-03-20 19:50:09,235 - __main__ - INFO - Saved 6000 images for class horse
+2025-03-20 19:50:09,236 - __main__ - INFO - Created directory: data/cifar10_images\ship
+2025-03-20 19:50:09,236 - __main__ - INFO - Class ship: 6000 images
+2025-03-20 19:50:19,986 - __main__ - INFO - Saved 6000 images for class ship
+2025-03-20 19:50:19,986 - __main__ - INFO - Created directory: data/cifar10_images\truck
+2025-03-20 19:50:19,987 - __main__ - INFO - Class truck: 6000 images
+2025-03-20 19:50:30,833 - __main__ - INFO - Saved 6000 images for class truck
+2025-03-20 19:50:30,834 - __main__ - INFO - CIFAR-10 dataset organized successfully
