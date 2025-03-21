@@ -1,0 +1,67 @@
+stages:
+  pull_data:
+    cmd: python src/stages/pull_data.py
+    deps:
+      - src/stages/pull_data.py
+      - config.yaml
+    outs:
+      - data/dataset.pkl
+    params:
+      - random_seed
+      - dataset.version
+
+  prepare_data:
+    cmd: python src/stages/prepare_data.py
+    deps:
+      - src/stages/prepare_data.py
+      - data/dataset.pkl
+      - config.yaml
+    outs:
+      - data/train_data.pkl
+      - data/val_data.pkl
+      - data/test_data.pkl
+    params:
+      - random_seed
+      - dataset.split.train
+      - dataset.split.val
+      - dataset.split.test
+
+  train_model:
+    cmd: python src/stages/train_model.py
+    deps:
+      - src/stages/train_model.py
+      - data/train_data.pkl
+      - data/val_data.pkl
+      - config.yaml
+    outs:
+      - models/best_model.h5
+      - models/tuning_results.json
+    params:
+      - random_seed
+      - model.learning_rate
+      - model.batch_size
+      - model.epochs
+      - model.conv_layers
+      - model.conv_filters
+      - model.kernel_sizes
+      - model.dropout_rate
+      - tuning.param1
+      - tuning.param1_values
+      - tuning.param2
+      - tuning.param2_values
+    metrics:
+      - metrics/training_metrics.json:
+          cache: false
+
+  evaluate_model:
+    cmd: python src/stages/evaluate_model.py
+    deps:
+      - src/stages/evaluate_model.py
+      - models/best_model.h5
+      - data/test_data.pkl
+      - config.yaml
+    outs:
+      - results/confusion_matrix.png
+    metrics:
+      - metrics/evaluation_metrics.json:
+          cache: false

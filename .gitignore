@@ -1,0 +1,6 @@
+./dvc/*
+data/*
+./.env/*
+logs/*
+metrics/*
+models/*
