@@ -1,0 +1,15 @@
+*.log
+__pycache__/
+*.pyc
+.dvc/*
+
+data/*
+.env/*
+logs/*
+metrics/*
+models/*
+cifar10_partitioning
+partitions/partition_v0/data/*
+partitions/partition_v1/data/*
+partitions/partition_v2/data/*
+venv/*
