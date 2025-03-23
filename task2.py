@@ -4,6 +4,11 @@ import random
 import shutil
 import subprocess
 
+# import yaml
+
+# with open('gonfig.yml', 'r') as file:
+#     config = yaml.safe_load(file)
+
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
@@ -170,7 +175,7 @@ if __name__ == "__main__":
     setup_git_repo(remote_url=None)  # Add your remote URL if needed
     
     # Create partitions
-    create_partitions()
+    # create_partitions()
     
     # Add to DVC and Git, and push
-    #push_to_dvc_and_git(remote_url=None)  # Add your remote URL if needed
+    push_to_dvc_and_git(remote_url=None)  # Add your remote URL if needed

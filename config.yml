@@ -22,3 +22,8 @@ tuning:
   param1_values: [0.0001, 0.001, 0.01]
   param2: "dropout_rate"
   param2_values: [0.3, 0.5, 0.7]
+
+git_username: "KnitRanger9"
+git_email: "da24m004@smail.iitm.ac.in"
+git_password: "H74x3RSAdWk"
+git_url : "https://github.com/KnitRanger9/DA5402_assignment5.git"
