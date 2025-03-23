@@ -138,7 +138,7 @@ def push_to_dvc_and_git(remote_url=None):
             logger.info(f"Added {partition_dir} to DVC")
             
             # Add .dvc file to Git
-            subprocess.run(['git', 'add', f'{partition_dir}.dvc'], check=True)
+            subprocess.run(['git', 'add', f'{partition_dir}/data.dvc {partition_dir}/.gitignore'], check=True)
             
             # Commit changes
             commit_msg = f'Add dataset partition v{i}'
@@ -149,14 +149,15 @@ def push_to_dvc_and_git(remote_url=None):
             tag_message = f'Dataset partition v{i}'
             subprocess.run(['git', 'tag', '-a', tag_name, '-m', tag_message], check=True)
             logger.info(f"Tagged {partition_dir} with Git tag {tag_name}")
-        
-        # Push to remote if URL is provided
-        if remote_url:
+
             # Push commits
             subprocess.run(['git', 'push', 'origin', 'main'], check=True)
             # Push tags
             subprocess.run(['git', 'push', 'origin', '--tags'], check=True)
             logger.info("Pushed commits and tags to remote")
+        
+        # Push to remote if URL is provided
+        if remote_url:
             
             # Push DVC data to remote if configured
             try:
@@ -175,7 +176,7 @@ if __name__ == "__main__":
     setup_git_repo(remote_url=None)  # Add your remote URL if needed
     
     # Create partitions
-    # create_partitions()
+    create_partitions()
     
     # Add to DVC and Git, and push
     push_to_dvc_and_git(remote_url=None)  # Add your remote URL if needed
