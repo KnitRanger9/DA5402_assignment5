@@ -11,7 +11,9 @@
 
 ## Question 2:
 
-- Run task2.py [This code has two functions: 1. create_partitions(): creates 3 partitions of CIFAR data.        2. push_to_dvc_and_git(remote_url=None) pushes 3 partitions to dvc and to git as three versions]
+- Run task2.py [This code has two functions:] 
+    - 1. create_partitions(): creates 3 partitions of CIFAR data. 
+    - 2. push_to_dvc_and_git(remote_url=None) pushes 3 partitions to dvc and to git as three versions
 
 ## Question 3:
 **Question 3 is divided into 3 stages:**
