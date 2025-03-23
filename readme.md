@@ -12,8 +12,8 @@
 ## Question 2:
 
 - Run task2.py [This code has two functions:] 
-    - 1. create_partitions(): creates 3 partitions of CIFAR data. 
-    - 2. push_to_dvc_and_git(remote_url=None) pushes 3 partitions to dvc and to git as three versions
+    -  create_partitions(): creates 3 partitions of CIFAR data. 
+    -  push_to_dvc_and_git(remote_url=None) pushes 3 partitions to dvc and to git as three versions
 
 ## Question 3:
 **Question 3 is divided into 3 stages:**
@@ -21,3 +21,8 @@
 
 ### Stage 1: Pull Data from DVC
 - run pull_data.py [This pulls the data as per version from dvc]
+- dumps the data into /data directory as dataset.pkl
+
+### Stage 2: Prepare data:
+- splits data into train, test, val
+- dumps them into data/ directory as train_data.pkl, val_data.pkl and test_data.pkl files

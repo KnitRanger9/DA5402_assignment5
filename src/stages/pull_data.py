@@ -37,7 +37,7 @@ def pull_data():
     
     # Pull the specified version
     try:
-        subprocess.run(['dvc', 'checkout', f'data/partition_{version}.dvc'], check=True)
+        subprocess.run(['dvc', 'checkout', f'partitions/partition_{version}/data.dvc'], check=True)
         logger.info(f"Successfully pulled dataset version {version}")
     except subprocess.CalledProcessError as e:
         logger.error(f"Error pulling dataset: {e}")
@@ -47,7 +47,7 @@ def pull_data():
     os.makedirs('data', exist_ok=True)
     
     # Process the images and convert to a dataframe-like structure
-    partition_dir = f'data/partition_{version}'
+    partition_dir = f'partitions/partition_{version}/data'
     
     # Initialize lists to store data
     images = []

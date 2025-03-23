@@ -6,7 +6,7 @@ import subprocess
 
 # import yaml
 
-# with open('gonfig.yml', 'r') as file:
+# with open('config.yaml', 'r') as file:
 #     config = yaml.safe_load(file)
 
 # Set up logging
@@ -100,18 +100,7 @@ def setup_git_repo(repo_name="cifar10-partitions", remote_url=None):
         if remote_url:
             subprocess.run(['git', 'remote', 'add', 'origin', remote_url], check=True)
             logger.info(f"Added remote: {remote_url}")
-            
-        # Create .gitignore
-        # with open('.gitignore', 'w') as f:
-        #     f.write("*.log\n")
-        #     f.write("__pycache__/\n")
-        #     f.write("*.pyc\n")
-        #     f.write("data/cifar10_images/\n")  # Don't track original dataset
-            
-        # Add .gitignore to Git
-        # subprocess.run(['git', 'add', '.gitignore'], check=True)
-        # subprocess.run(['git', 'commit', '-m', 'Initial commit with .gitignore'], check=True)
-        # logger.info("Created .gitignore and committed")
+
             
     except subprocess.CalledProcessError as e:
         logger.error(f"Error during Git setup: {e}")
