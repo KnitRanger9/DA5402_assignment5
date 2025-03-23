@@ -2,3 +2,4 @@ numpy
 # tensorflow
 imageio
 dvc[all]
+scikit-learn
