@@ -97,11 +97,11 @@ def setup_git_repo(repo_name="cifar10-partitions", remote_url=None):
             logger.info(f"Added remote: {remote_url}")
             
         # Create .gitignore
-        with open('.gitignore', 'w') as f:
-            f.write("*.log\n")
-            f.write("__pycache__/\n")
-            f.write("*.pyc\n")
-            f.write("data/cifar10_images/\n")  # Don't track original dataset
+        # with open('.gitignore', 'w') as f:
+        #     f.write("*.log\n")
+        #     f.write("__pycache__/\n")
+        #     f.write("*.pyc\n")
+        #     f.write("data/cifar10_images/\n")  # Don't track original dataset
             
         # Add .gitignore to Git
         # subprocess.run(['git', 'add', '.gitignore'], check=True)
