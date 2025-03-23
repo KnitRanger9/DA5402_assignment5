@@ -1,29 +1,37 @@
-random_seed: 42
 dataset:
-  version: "v1"  # can be v0, v1, v2
   split:
+    test: 0.15
     train: 0.7
     val: 0.15
-    test: 0.15
-
+  version: v0
+git_email: da24m004@smail.iitm.ac.in
+git_password: H74x3RSAdWk
+git_url: https://github.com/KnitRanger9/DA5402_assignment5.git
+git_username: KnitRanger9
 model:
-  architecture: "cnn"
-  learning_rate: 0.001
+  architecture: cnn
   batch_size: 64
-  epochs: 30
+  conv_filters:
+  - 32
+  - 64
+  - 128
   conv_layers: 3
-  conv_filters: [32, 64, 128]
-  kernel_sizes: [3, 3, 3]
   dropout_rate: 0.5
-  
-# Parameters for hyperparameter tuning
+  epochs: 30
+  kernel_sizes:
+  - 3
+  - 3
+  - 3
+  learning_rate: 0.001
+random_seed: 42
 tuning:
-  param1: "learning_rate"
-  param1_values: [0.0001, 0.001, 0.01]
-  param2: "dropout_rate"
-  param2_values: [0.3, 0.5, 0.7]
-
-git_username: "KnitRanger9"
-git_email: "da24m004@smail.iitm.ac.in"
-git_password: "H74x3RSAdWk"
-git_url : "https://github.com/KnitRanger9/DA5402_assignment5.git"
+  param1: learning_rate
+  param1_values:
+  - 0.0001
+  - 0.001
+  - 0.01
+  param2: dropout_rate
+  param2_values:
+  - 0.3
+  - 0.5
+  - 0.7

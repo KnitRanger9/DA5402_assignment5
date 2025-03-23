@@ -1,5 +1,7 @@
 numpy
-# tensorflow
+pandas
+tensorflow
 imageio
 dvc[all]
 scikit-learn
+matplotlib

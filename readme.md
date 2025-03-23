@@ -3,7 +3,11 @@
 -- Project Setup--
 1. config.yaml contains all details such as models, model variables, git variables, etc
 2. It is recommended to make a virtual environment for python version 3.10.0, as for latest versions tensorflow creates trouble
-`python3.10 -m venv venv`
+
+```bash
+    python3.10 -m venv venv
+
+```
 
 ## Question 1:
 
@@ -26,3 +30,12 @@
 ### Stage 2: Prepare data:
 - splits data into train, test, val
 - dumps them into data/ directory as train_data.pkl, val_data.pkl and test_data.pkl files
+
+### Stage 3: Model Training & Tuning
+- run src/stages/train_model.py
+- build_model(): builds CNN model based on training dataset and configurations
+- train_and_tune_model(): calls build_model() to train a model and then finds the best model of the two chosen hyperparameters
+
+### Stage 4: Evaluate Performance
+- run src/stages/evaluate_model.py
+- 
